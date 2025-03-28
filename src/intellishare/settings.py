@@ -78,10 +78,10 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": "intellishare",
-        "USER": "awwabaliazam",
-        "PASSWORD": "",
+        "USER": "shin5155",
+        "PASSWORD": "05Z@ney15",
         "HOST": "localhost",
-        "PORT": "",
+        "PORT": "5432",
     },
     "backup": {
         "ENGINE": "django.db.backends.sqlite3",

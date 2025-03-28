@@ -1,0 +1,162 @@
+/* Base Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f9fbfc;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Layout Structure */
+header, footer {
+    background-color: #0077cc;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+  }
+  
+  main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  }
+
+  /* Navigation */
+
+header {
+    transition: background-color 0.3s ease; 
+  background-color: #004080; 
+  padding: 20px 0;
+}
+
+nav {
+  text-align: center;
+}
+
+
+header:hover {
+    background-color: #ffd700 !important; 
+  }
+  
+  header nav a {
+    color: white; 
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  header:hover nav a {
+    color: #004080 !important; 
+    transform: scale(1.1); 
+  }
+  
+/* Make the icon background red when hovering */
+header nav a:hover span {
+    color: white !important; 
+    background-color: #FF0000; 
+    padding: 5px; 
+    border-radius: 50%; 
+  }
+  
+  
+  
+      
+  
+
+
+  /* Home Styling - home.html */
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #004080;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #0066cc;
+    text-align: center;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 15px 0;
+  }
+  
+  /* Logo image */
+  img[alt="Intellishare Logo"] {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  /* Links in paragraphs */
+  p a {
+    color: #0077cc;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  p a:hover {
+    text-decoration: underline;
+  }
+  
+
+  /* Hero Section */
+  .hero {
+    background-color: #004080;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    background-image: url("{% static 'images/12442.webp' %}"); 
+    background-position: center;
+
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: white; 
+  }
+  
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .cta-btn {
+    padding: 10px 30px;
+    background-color: #ffd700;
+    color: #004080;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  .cta-btn:hover {
+    background-color: #e60000; 
+    transform: scale(1.1);
+  }
+  
+  
