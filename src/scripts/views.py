@@ -2,6 +2,7 @@ import os
 import subprocess
 
 from django.conf import settings
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 
 from .forms import UploadFileForm
@@ -36,6 +37,7 @@ def handle_uploaded_file(f):
     return output
 
 
+@login_required(login_url="/users/login")
 def upload_file(request):
     if request.method == "POST":
         form = UploadFileForm(request.POST, request.FILES)
