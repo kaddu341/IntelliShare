@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block content %}
+    <h1>Script Output</h1>
+
+    <h2>Log Contents:</h2>
+    <pre style="background:#f4f4f4; padding:1em; border:1px solid #ccc;">
+        {{ log_content }}
+    </pre>
+    
+    <a href="{{ log_url }}" download>Download Log File</a>
+    <p>Return to <a href="/">Home</a>!</p>
+{% endblock %}

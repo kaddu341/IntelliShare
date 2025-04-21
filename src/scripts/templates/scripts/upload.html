@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Python Script Upload
+{% endblock %}
+
+{% block content %}
+    <h1>Python Script Upload</h1>
+    <form action="/scripts/upload/" enctype="multipart/form-data" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button>Submit</button>
+    </form>
+    <p>Return to <a href="/">Home</a>!</p>
+{% endblock %}
