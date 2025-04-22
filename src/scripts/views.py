@@ -2,8 +2,9 @@ import os
 import subprocess
 
 from django.conf import settings
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 
 from .forms import UploadFileForm
 
@@ -40,9 +41,19 @@ def handle_uploaded_file(f):
 @login_required(login_url="/users/login")
 def upload_file(request):
     if request.method == "POST":
+        user_profile = request.user.profile
+        if user_profile.tokens <= 0:
+            messages.error(request, "You have no tokens left.")
+            return redirect("home")
+
         form = UploadFileForm(request.POST, request.FILES)
         if form.is_valid():
+            # process Python script
             log_content = handle_uploaded_file(request.FILES["file"])
+            # decrement no. of tokens
+            user_profile.tokens -= 1
+            user_profile.save()
+            # return output
             log_url = settings.MEDIA_URL + "output.log"
             return render(
                 request,
