@@ -57,7 +57,7 @@ ROOT_URLCONF = "intellishare.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": ["templates"],
+        "DIRS": [BASE_DIR / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -80,8 +80,13 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": "intellishare",
+<<<<<<< Updated upstream
         "USER": "awwabaliazam",
         "PASSWORD": "",
+=======
+        "USER": "admin",
+        "PASSWORD": "admin",
+>>>>>>> Stashed changes
         "HOST": "localhost",
         "PORT": "",
     },
